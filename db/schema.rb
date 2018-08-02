@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2018_07_20_134550) do
   create_table "high_scores", force: :cascade do |t|
     t.bigint "game_id"
     t.bigint "user_id"
+    t.string "user_name"
+    t.string "game_name"
     t.integer "score"
     t.index ["game_id"], name: "index_high_scores_on_game_id"
     t.index ["user_id"], name: "index_high_scores_on_user_id"
